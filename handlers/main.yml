@@ -1,0 +1,7 @@
+---
+# caddy_server/handlers/main.yml
+
+- name: 'Restart caddy'
+  ansible.builtin.service:
+    name: 'caddy'
+    state: 'restarted'
