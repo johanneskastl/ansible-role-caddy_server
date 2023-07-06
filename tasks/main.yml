@@ -1,0 +1,23 @@
+---
+# caddy_server/tasks/main.yml
+
+- name: 'Install caddy package'
+  ansible.builtin.package:
+    name: 'caddy'
+    state: 'present'
+
+- name: 'Create config file'
+  ansible.builtin.template:
+    src: 'Caddyfile.j2'
+    dest: '/etc/caddy/Caddyfile'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  notify:
+    - 'Restart caddy'
+
+- name: 'Start and enable the caddy service'
+  ansible.builtin.service:
+    name: 'caddy'
+    state: 'started'
+    enabled: true
