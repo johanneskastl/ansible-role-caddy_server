@@ -8,3 +8,4 @@ caddy_config: |
   "
       close
   }
+caddy_autosaved_config: '/var/lib/caddy/.config/caddy/autosave.json'
