@@ -1,0 +1,10 @@
+---
+# caddy_server/defaults/main.yml
+
+caddy_config: |
+  http://{{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}:80
+  respond /* 200 {
+      body "Hello from the caddy_server ansible role!
+  "
+      close
+  }
