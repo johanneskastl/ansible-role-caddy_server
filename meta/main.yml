@@ -1,0 +1,22 @@
+galaxy_info:
+  role_name: 'caddy_server'
+  namespace: 'johanneskastl'
+  author: 'Johannes Kastl'
+  description: 'Install and configure a caddy webserver'
+  company: 'B1 Systems GmbH'
+
+  license: 'BSD-3-Clause'
+
+  min_ansible_version: '2.12'
+
+  platforms:
+    - name: opensuse
+      versions:
+        - all
+    - name: SLES
+      versions:
+        - all
+
+  galaxy_tags: []
+
+dependencies: []
