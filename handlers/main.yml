@@ -1,6 +1,11 @@
 ---
 # caddy_server/handlers/main.yml
 
+- name: 'Delete autosaved config file'
+  ansible.builtin.file:
+    path: "{{ caddy_autosaved_config }}"
+    state: 'absent'
+
 - name: 'Restart caddy'
   ansible.builtin.service:
     name: 'caddy'
